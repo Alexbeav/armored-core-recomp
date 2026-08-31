@@ -1,0 +1,31 @@
+{
+  "cue_path": "Armored Core (Europe) (En,Fr,De,Es,It).cue",
+  "cue_name": "Armored Core (Europe) (En,Fr,De,Es,It).cue",
+  "bin_name": "Armored Core (Europe) (En,Fr,De,Es,It).bin",
+  "track_count": 1,
+  "data_track_size": 552207264,
+  "data_track_md5": "091e015370bbb8c17adcb8c3dd84390d",
+  "data_track_sha1": "20ad05be52317bce58b251be103f9add03c92609",
+  "data_track_crc32": "f56c34b4",
+  "boot_exe": "SCES_008.42",
+  "serial": "SCES-00842",
+  "serial_exe": "SCES_008.42",
+  "volume_id": "SCES-00842",
+  "display_name": "armored-core-",
+  "load_address": "0x80011000",
+  "entry_pc": "0x80011E50",
+  "text_size": "0x00029800",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "b3a8021fbd2663158178b9ab5bb6475a23dcf278ee806310cb7be01ee50300fd",
+  "boot_exe_sha256": "32bebfa1830e0ebf36cc54da874958f665bf47c23894b7cf2acee450b5670cbf",
+  "seed_count": 332,
+  "warnings": [
+    "cue has only 1 TRACK — Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

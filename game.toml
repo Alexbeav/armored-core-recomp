@@ -1,0 +1,53 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Armored Core"
+id = "SCES-00842"
+players = 1
+exe = "disc/SCES_008.42"
+disc = ""
+load_address = "0x80011000"
+entry_pc = "0x80011E50"
+text_size = "0x00029800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Armored Core (Europe) (En,Fr,De,Es,It).bin"
+cue_name = "Armored Core (Europe) (En,Fr,De,Es,It).cue"
+boot_exe = "SCES_008.42"
+known_sizes = [552207264]
+known_md5 = [
+  "091e015370bbb8c17adcb8c3dd84390d",
+]
+known_sha1 = [
+  "20ad05be52317bce58b251be103f9add03c92609",
+]
+known_crc32 = [
+  "f56c34b4",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+window_title = "armored-core- Recompiled"
+memcard_dir = "saves"
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "b3a8021fbd2663158178b9ab5bb6475a23dcf278ee806310cb7be01ee50300fd"
